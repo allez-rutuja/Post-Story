@@ -1,0 +1,113 @@
+/* src/components/pages/TutorialPage.css */
+.tutorial-page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: left;
+    background-color: #f7f7f7;
+    color: #333;
+    padding-bottom: 80px; /* Space for the bottom navigation */
+}
+
+
+.tutorial-main-content {
+    flex-grow: 1;
+    padding: 20px;
+    margin-top: 60px; /* Space for the fixed header */
+}
+
+.main-title {
+    font-size: 2em;
+    font-weight: 700;
+    margin: 0 0 5px;
+    color: #1a1a1a;
+}
+
+.subtitle {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.tutorial-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.tutorial-item {
+    background-color: #fff;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tutorial-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.item-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.item-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #e6f7ff;
+    color: #007bff;
+    flex-shrink: 0;
+}
+
+.item-text-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-title {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin: 0;
+    color: #333;
+}
+
+.item-description {
+    font-size: 0.9em;
+    color: #777;
+    margin: 5px 0 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limit to 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.arrow-icon {
+    width: 20px;
+    height: 20px;
+    color: #888;
+    flex-shrink: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 1.5em;
+    }
+
+    .subtitle {
+        font-size: 0.9em;
+    }
+}

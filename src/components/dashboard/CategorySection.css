@@ -1,0 +1,60 @@
+/* src/components/dashboard/CategorySection.css */
+
+.category-section {
+  margin-bottom: 20px;
+  padding-left: 20px; /* Add left padding to align headings with content */
+  padding-right: 20px; /* Add right padding */
+}
+
+.category-header {
+  display: flex; /* Makes children (h3 and button) lay out in a row */
+  justify-content: space-between; /* Pushes h3 to left, button to right */
+  align-items: center; /* Vertically aligns title and button */
+  margin-bottom: 15px; /* Spacing below the header */
+}
+
+.category-section h3 {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0; /* Reset margin as it's now controlled by category-header */
+  color: #333; /* Darker text for titles */
+  text-align: left;
+}
+
+.view-all-button {
+  background: none; /* No background fill */
+  border: none; /* No border */
+  color: #2f6f77; /* A distinct color for the link */
+  font-size: 0.9em;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.view-all-button:hover {
+  background-color: #f0f0f0; /* Subtle hover effect */
+}
+
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three equal columns for mobile */
+  gap: 15px;
+  overflow-x: hidden; /* Hide horizontal scroll if it's a wrapping grid */
+  padding-bottom: 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  justify-content: center;
+}
+
+.items-grid::-webkit-scrollbar {
+  display: none;
+}
+
+/* Media query for larger screens if you want a different layout */
+@media (min-width: 768px) {
+  .items-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); /* Revert to adaptive for tablets/desktops */
+  }
+}

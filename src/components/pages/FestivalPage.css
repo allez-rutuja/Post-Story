@@ -1,0 +1,36 @@
+/* src/components/pages/FestivalPage.css */
+.festival-page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+.festival-main-content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #fcf8f3; /* Light beige background consistent with cards */
+}
+
+.festival-heading {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center; /* Center the heading for the full page */
+}
+
+.full-festival-images-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Adaptive grid for all images */
+  gap: 15px;
+  justify-content: center;
+  padding: 0 10px; /* Some padding from the sides */
+}
+
+/* For mobile, you might want 3 columns as well, or adapt based on content */
+@media (max-width: 600px) {
+  .full-festival-images-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on small screens */
+  }
+}

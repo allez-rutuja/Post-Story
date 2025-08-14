@@ -1,0 +1,303 @@
+/* PostDetailPage.css - Refined to match the exact style of the mobile screenshot */
+
+.post-detail-page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #eef2f5; /* Light grey background */
+  font-family: 'Roboto', sans-serif; /* A more common sans-serif font for modern UI */
+  color: #333;
+}
+
+/* Top Bar (Matches "Select Frame" and "Next" section in screenshot) */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #e0f2f7, #c8e6c9); /* Light gradient matching top bar */
+  padding: 10px 15px; /* Slightly reduced padding */
+  border-bottom: 1px solid #c2e6d6; /* Subtle border */
+  font-weight: 500; /* Medium font weight */
+  font-size: 1em; /* Standard font size */
+  color: #4a4a4a; /* Darker grey text */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.top-bar-title {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #333;
+}
+
+.next-button {
+  background-color: #00bfa5; /* Greenish button */
+  color: white;
+  padding: 6px 15px; /* Slightly smaller padding */
+  border-radius: 18px; /* More rounded */
+  border: none;
+  font-weight: 600;
+  font-size: 0.85em; /* Slightly smaller font */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.next-button:hover {
+  background-color: #00a892;
+}
+
+.post-detail-content {
+  flex-grow: 1;
+  padding: 0; /* Image takes full width within this container */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px; /* Reduced gap between sections */
+  max-width: 600px; /* Max width for content area */
+  margin: 0 auto;
+  background-color: #eef2f5; /* Match overall background, not white */
+  overflow: hidden; /* Ensure no overflow if elements exceed max-width */
+}
+
+.post-image-wrapper {
+  width: 100%; /* Image takes full width */
+  max-width: 100%;
+  background-color: #f5f5f5; /* Light background behind image */
+  border-radius: 0; /* No border-radius for the main image wrapper */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+.post-detail-canvas {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0;
+  object-fit: contain;
+}
+
+/* Frame Carousel */
+.frame-carousel {
+  display: flex;
+  gap: 6px; /* Reduced gap */
+  overflow-x: auto;
+  padding: 8px 0; /* Reduced vertical padding, no horizontal padding */
+  width: 98%; /* Slightly less than 100% to create small side margins */
+  justify-content: center; /* Center the thumbnails */
+  background-color: #ffffff; /* White background for carousel section */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+.frame-carousel::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari, Edge */
+}
+
+.frame-thumbnail {
+  width: 65px; /* Slightly smaller thumbnails */
+  height: 65px;
+  border-radius: 6px; /* Slightly more rounded */
+  border: 2px solid transparent;
+  object-fit: cover;
+  cursor: pointer;
+  transition: border 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Lighter shadow */
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+.frame-thumbnail.selected {
+  border-color: #00bfa5; /* Green border for selected */
+  transform: scale(1.08); /* Slightly more prominent scale */
+}
+
+/* Tool Icons (middle section: Name, Logo, Email etc.) */
+.tool-icon-bar {
+  display: flex;
+  justify-content: space-around; /* Distribute icons evenly */
+  align-items: center;
+  margin: 8px 0; /* Reduced margin */
+  background: #ffffff; /* White background */
+  border-radius: 10px;
+  padding: 10px 0;
+  width: 98%; /* Consistent width */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); /* Adjusted shadow */
+}
+
+.tool-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.7em; /* Even smaller font size */
+  color: #666; /* Medium grey */
+  cursor: pointer;
+  padding: 5px; /* Added padding for clickable area */
+  transition: transform 0.2s ease;
+}
+
+.tool-icon:hover {
+  transform: translateY(-2px); /* Subtle hover effect */
+}
+
+.tool-icon img {
+  width: 20px; /* Slightly smaller icons */
+  height: 20px;
+  margin-bottom: 3px; /* Reduced margin */
+}
+
+/* REMOVED: .editing-tools-section, .tool-group, .tool-select, .tool-input, .tool-button, .text-options styles */
+
+/* Hashtag Section */
+.add-hashtag-section {
+  display: flex;
+  align-items: center;
+  width: 98%; /* Consistent width */
+  background-color: #ffffff; /* White background */
+  border-radius: 10px; /* Consistent border-radius */
+  padding: 8px 15px; /* Reduced padding */
+  border: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); /* Consistent shadow */
+  margin-top: 5px; /* Small margin */
+}
+
+.hashtag-avatar {
+  width: 35px; /* Slightly smaller avatar */
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 8px; /* Reduced margin */
+  border: 1px solid #ddd; /* Lighter border */
+}
+
+.hashtag-input {
+  flex-grow: 1;
+  background-color: transparent;
+  border: none;
+  color: #333;
+  font-size: 0.95em; /* Adjusted font size */
+  outline: none;
+  padding: 5px;
+}
+
+.hashtag-input::placeholder {
+  color: #999;
+  font-style: normal; /* No italics as per screenshot */
+  font-weight: 400;
+}
+
+/* Action Buttons (Save and Share) */
+.action-buttons {
+  display: flex;
+  justify-content: space-around; /* Distribute buttons */
+  gap: 10px; /* Reduced gap */
+  width: 98%; /* Consistent width */
+  margin-top: 10px; /* Margin from previous section */
+}
+
+.save-post-button,
+.share-post-button {
+  flex: 1;
+  max-width: 160px; /* Adjusted max-width to fit side-by-side */
+  padding: 10px 15px; /* Adjusted padding */
+  border-radius: 20px; /* More rounded */
+  font-size: 0.9em; /* Smaller font size */
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.1s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Lighter shadow */
+}
+
+.save-post-button {
+  background-color: #00bfa5; /* Greenish button */
+  color: white;
+}
+
+.save-post-button:hover {
+  background-color: #00a892;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.share-post-button {
+  background-color: #607d8b; /* Blue-grey color as seen in the image */
+  color: white;
+}
+
+.share-post-button:hover {
+  background-color: #4b6470;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Bottom Toolbar (for Add Logo, Add Text, etc.) */
+.bottom-toolbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start; /* Align items to the top */
+  margin-top: 15px; /* Space from above content */
+  border-top: 1px solid #eceff1; /* Very light border */
+  padding-top: 8px; /* Reduced top padding */
+  padding-bottom: 8px; /* Reduced bottom padding */
+  width: 100%; /* Full width */
+  background-color: #ffffff; /* White background */
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05); /* Shadow on top edge */
+}
+
+.bottom-toolbar button {
+  background: none;
+  border: none;
+  font-size: 0.7em; /* Small font size for labels */
+  color: #555; /* Consistent grey */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  padding: 5px 2px; /* Small padding */
+  transition: transform 0.2s ease;
+}
+
+.bottom-toolbar button:hover {
+  transform: translateY(-2px); /* Subtle hover effect */
+}
+
+.bottom-toolbar button img {
+  width: 22px; /* Slightly smaller icons */
+  height: 22px;
+  margin-bottom: 3px; /* Reduced margin */
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+  .post-detail-content {
+    padding: 0;
+    gap: 10px;
+  }
+
+  .tool-icon-bar,
+  .add-hashtag-section,
+  .action-buttons {
+    width: 98%; /* Ensure they don't hit edges on very small screens */
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .save-post-button,
+  .share-post-button {
+    max-width: unset; /* Allow them to take available space */
+  }
+
+  .bottom-toolbar button {
+    padding: 5px 0; /* Adjust padding for very small screens */
+  }
+}

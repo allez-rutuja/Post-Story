@@ -1,0 +1,122 @@
+/* General page and container styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 350px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.login-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.login-logo {
+  width: 150px;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+/* Input fields and messages */
+.login-input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* OTP Resend Link */
+.resend-text {
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none;
+  cursor: pointer;
+  margin-top: -10px;
+  margin-bottom: 20px;
+  align-self: flex-start;
+}
+
+/* Policy checkbox */
+.policy-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  align-self: flex-start;
+}
+
+.policy-container input[type="checkbox"] {
+  accent-color: #2196f3;
+}
+
+.policy-container label {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Buttons */
+.login-btn,
+.google-btn {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.login-btn {
+  background-color: #36a59d;
+}
+
+.google-btn {
+  background-color: #424242;
+}
+
+/* Register link */
+.register-link {
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none;
+  margin-top: 20px;
+}
+.facebook-btn {
+  background-color: #3b5998;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.facebook-btn:hover {
+  background-color: #2d4373;
+}

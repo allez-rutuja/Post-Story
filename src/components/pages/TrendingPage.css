@@ -1,0 +1,65 @@
+/* src/components/pages/TrendingPage.css */
+
+.trending-page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+.trending-main-content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #fcf8f3;
+}
+
+.trending-heading {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  padding-left: 5px;
+}
+
+.trending-items-grid {
+  display: grid;
+  /* Updated to explicitly show 3 columns per row for mobile view */
+  grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+  gap: 15px;
+  justify-content: center;
+  padding: 0 5px;
+}
+
+/* Card styles are already defined inline for TrendingPage.css to match screenshot */
+.card {
+  background-color: #fcf8f3;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  aspect-ratio: 1 / 1;
+  box-shadow: none;
+  border: none;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.card-title {
+  display: none;
+}
+
+/* Optional: Media query to adjust for larger screens if you want different layouts */
+@media (min-width: 768px) {
+  .trending-items-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); /* Revert to adaptive for tablets/desktops */
+  }
+}

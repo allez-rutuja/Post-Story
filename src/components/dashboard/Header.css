@@ -1,0 +1,148 @@
+/* src/components/dashboard/Header.css */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #fff;
+  border-bottom: none; /* Remove border-bottom */
+  box-shadow: none; /* Remove box-shadow */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+  border: 2px solid #f0f0f0;
+}
+
+.profile-info h3 {
+  font-size: 1.1em;
+  margin: 0;
+  color: #333;
+}
+
+.profile-info p {
+  font-size: 0.8em;
+  color: #777;
+  margin: 0;
+}
+
+.translate-button {
+  background-color: #f0f0f0;
+  color: #555;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease;
+  margin-left: 10px; /* Adjust spacing */
+}
+
+.translate-button:hover {
+  background-color: #e0e0e0;
+}
+
+.status-indicators {
+  display: flex;
+  gap: 8px;
+   margin-left: auto; /* Push to the right */
+  margin-right: 15px; /* Add some margin from the right edge */
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dot.pink {
+  background-color: #ff69b4;
+}
+
+.dot.blue {
+  background-color: #1e90ff;
+}
+
+.dot.purple {
+  background-color: #9370db;
+}
+
+/* Styles for the new logo */
+.app-logo-container {
+  /* You might adjust positioning if you want it exactly where the status indicators are,
+     or keep it separate as a new right-most element */
+  margin-left: 15px; /* Add some space if it's next to status indicators */
+  display: flex; /* Use flex to align content if there's an image inside */
+  align-items: center;
+  justify-content: center;
+  width: 30px; /* Adjust size to match the black square in the screenshot */
+  height: 30px;
+  background-color: black; /* Black background for the logo container */
+  border-radius: 5px; /* Small border-radius for the logo container */
+}
+
+.app-logo {
+  width: 40px; /* Adjust size as needed */
+  height: 40px; /* Adjust size as needed */
+  object-fit: contain; /* Ensure the logo fits without cropping */
+}
+.share-container {
+  position: relative; /* Essential for positioning the dropdown */
+}
+
+.share-button, .translate-button {
+  background-color: #2f6f77;
+  color: white;
+  border: none;
+  padding: 1px 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.6em;
+  margin-left: 15px; /* Adjust spacing as needed */
+}
+
+.share-button:hover, .translate-button:hover {
+  background-color: #8d6e55;
+}
+
+.share-menu {
+  position: absolute;
+  top: 100%; /* Position below the button */
+  left: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 100; /* Ensure it appears above other content */
+  min-width: 150px; /* Adjust as needed */
+  display: flex;
+  flex-direction: column;
+  padding: 15px 0;
+}
+
+.share-menu button {
+  background: none;
+  border: none;
+  padding: 10px 15px;
+  text-align: left;
+  cursor: pointer;
+  font-size: 0.9em;
+  color: #333;
+}
+
+.share-menu button:hover {
+  background-color: #f0f0f0;
+}

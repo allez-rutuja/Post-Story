@@ -1,0 +1,294 @@
+/* src/components/pages/SettingsPage.css */
+
+/* Base styles for the entire page */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light Theme */
+body.light-theme {
+    background-color: #f0f2f5;
+    color: #1c1e21;
+}
+
+/* Dark Theme */
+body.dark-theme {
+    background-color: #1c1e21;
+    color: #e4e6eb;
+}
+
+.settings-page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-bottom: 80px; /* Space for the fixed bottom navigation */
+    align-items: center;
+    width: 100%;
+}
+
+/* Mobile Header as seen in the image */
+.mobile-header {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.mobile-header .header-phone {
+    font-size: 1em;
+    color: #65676b;
+}
+
+body.dark-theme .mobile-header .header-phone {
+    color: #b0b3b8;
+}
+
+/* Main content area styling */
+.settings-main-content {
+    flex: 1;
+    max-width: 800px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 0 15px;
+    background-color: transparent;
+}
+
+/* Styling for the sections within the main content */
+.settings-section {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+body.light-theme .settings-section {
+    background-color: #ffffff;
+}
+
+body.dark-theme .settings-section {
+    background-color: #242526;
+}
+
+.settings-section.help-section {
+    margin-top: 40px;
+}
+
+/* Section headers for titles and subtitles */
+.section-header {
+    padding: 15px 20px;
+}
+
+.section-title {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin: 0;
+    color: #1c1e21;
+}
+
+body.dark-theme .section-title {
+    color: #e4e6eb;
+}
+
+.section-subtitle {
+    font-size: 0.9em;
+    color: #65676b;
+    margin-top: 5px;
+}
+
+body.dark-theme .section-subtitle {
+    color: #b0b3b8;
+}
+
+/* Individual setting button styling */
+.settings-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 15px 20px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.2s ease;
+}
+
+.settings-item:hover {
+    background-color: #f2f2f2;
+}
+
+body.dark-theme .settings-item:hover {
+    background-color: #3a3b3c;
+}
+
+.settings-item:last-child {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.settings-item .item-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.settings-item .item-icon svg {
+    width: 20px;
+    height: 20px;
+    stroke: #1c1e21;
+}
+
+body.dark-theme .settings-item .item-icon svg {
+    stroke: #e4e6eb;
+}
+
+.item-text {
+    flex-grow: 1;
+    font-size: 1em;
+    font-weight: 500;
+    color: inherit;
+}
+
+.item-arrow {
+    flex-shrink: 0;
+    margin-left: 10px;
+}
+
+.item-arrow .item-arrow-icon {
+    width: 20px;
+    height: 20px;
+    color: #909090;
+}
+
+body.dark-theme .item-arrow .item-arrow-icon {
+    color: #b0b3b8;
+}
+
+/* Community section styling */
+.community-section {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    width: 100%;
+}
+
+.community-text {
+    font-size: 0.9em;
+    font-weight: 600;
+    color: #65676b;
+}
+
+body.dark-theme .community-text {
+    color: #b0b3b8;
+}
+
+
+/* Modal styles */
+.share-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.share-modal-content {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-theme .share-modal-content {
+    background-color: #242526;
+    color: #e4e6eb;
+}
+
+.share-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.share-modal-header h2 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.share-modal-content .close-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #65676b;
+}
+
+body.dark-theme .share-modal-content .close-button {
+    color: #b0b3b8;
+}
+
+.share-options {
+    display: flex;
+    justify-content: space-around;
+}
+
+.share-option-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    transition: transform 0.2s ease;
+}
+
+.share-option-button:hover {
+    transform: translateY(-5px);
+}
+
+.share-option-button svg {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+}
+
+.whatsapp-button {
+    color: #25D366;
+}
+
+.twitter-button {
+    color: #1DA1F2;
+}
+
+.copy-link-button {
+    color: #65676b;
+}
+
+body.dark-theme .copy-link-button {
+    color: #b0b3b8;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .settings-main-content {
+        padding: 0 15px;
+    }
+}

@@ -1,0 +1,74 @@
+/* src/components/pages/SearchPage.css */
+
+.search-page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure it takes full viewport height */
+}
+
+.search-main-content {
+  flex-grow: 1; /* Allows main content to take available space */
+  padding: 20px;
+  text-align: center;
+  overflow-y: auto; /* Enable scrolling for search results */
+  padding-bottom: 80px; /* Space for the fixed bottom navigation */
+}
+
+.search-bar-container {
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 90%;
+  max-width: 500px;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 25px; /* Rounded corners */
+  font-size: 16px;
+  outline: none; /* Remove outline on focus */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+.search-input:focus {
+  border-color: #007bff; /* Highlight on focus */
+}
+
+.search-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive grid */
+  gap: 15px;
+  justify-content: center; /* Center items in the grid */
+  padding: 0 10px; /* Add some padding to the sides */
+}
+
+.search-result-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  overflow: hidden; /* Ensure image corners are rounded with item */
+}
+
+.search-result-image {
+  width: 100%;
+  height: 150px; /* Fixed height for consistency */
+  object-fit: cover; /* Cover the area, cropping if necessary */
+  border-bottom: 1px solid #eee;
+}
+
+.search-result-title {
+  font-size: 0.9em;
+  color: #333;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+}
+
+/* Optional: Adjust for smaller screens if NavigationBottom covers content */
+@media (max-width: 768px) {
+  .search-main-content {
+    padding-bottom: 100px; /* More space for fixed bottom navigation on smaller screens */
+  }
+}

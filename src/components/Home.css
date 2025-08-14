@@ -1,0 +1,187 @@
+/* Home.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Overall Page Layout */
+.home-container {
+    min-height: 100vh;
+    background-color: #f3f4f6; /* Light gray background */
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Fixed Top Header */
+.home-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home-profile-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem; /* Equivalent to Tailwind's space-x-3 */
+}
+
+.home-profile-pic {
+    width: 3rem; /* 48px */
+    height: 3rem; /* 48px */
+    border-radius: 9999px; /* Full circle */
+    object-fit: cover;
+}
+
+.home-profile-name {
+    font-weight: 600; /* semibold */
+    font-size: 1.125rem; /* text-lg */
+    color: #1f2937; /* gray-800 */
+}
+
+.home-profile-handle {
+    font-size: 0.875rem; /* text-sm */
+    color: #6b7280; /* gray-500 */
+}
+
+.trending-post-btn {
+    background-color: #8b5cf6; /* purple-600 */
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px; /* full rounded */
+    font-size: 0.875rem; /* text-sm */
+    font-weight: 500; /* medium */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.trending-post-btn:hover {
+    background-color: #7c3aed; /* purple-700 */
+}
+
+
+/* Main Content Area */
+.home-main-content {
+    flex-grow: 1;
+    padding-top: 5rem; /* Adjust based on header height */
+    padding-bottom: 4rem; /* Adjust based on bottom nav height */
+    padding-left: 1rem;
+    padding-right: 1rem;
+    overflow-y: auto; /* Allows content to scroll */
+}
+
+/* Post Story Banner */
+.post-story-banner {
+    background: linear-gradient(to bottom right, #fbbf24, #f43f5e); /* from-orange-400 to-pink-500 */
+    border-radius: 0.5rem; /* rounded-lg */
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+.post-story-banner h1 {
+    font-size: 2.25rem; /* text-3xl */
+    font-weight: 700; /* bold */
+    margin-bottom: 0.5rem;
+}
+
+.post-story-banner p {
+    font-size: 1.125rem; /* text-lg */
+    opacity: 0.9;
+}
+
+/* Content Sections (Trending, Festival, Best Wishes) */
+.content-section {
+    margin-bottom: 1.5rem;
+}
+
+.content-section-title {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: 700; /* bold */
+    color: #1f2937; /* gray-800 */
+    margin-bottom: 1rem;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Basic responsive grid */
+    gap: 1rem; /* 16px */
+}
+
+.card-item {
+    background-color: #ffffff;
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06); /* shadow-md */
+    overflow: hidden;
+}
+
+.card-item img {
+    width: 100%;
+    height: 8rem; /* 128px - h-32 */
+    object-fit: cover;
+}
+
+.card-item p {
+    padding: 0.75rem;
+    text-align: center;
+    color: #374151; /* gray-700 */
+}
+
+/* Fixed Bottom Navigation */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    padding: 0.75rem;
+    z-index: 10;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #6b7280; /* gray-500 */
+    text-decoration: none;
+    font-size: 0.75rem; /* text-xs */
+    transition: color 0.3s ease;
+}
+
+.nav-item.active,
+.nav-item:hover {
+    color: #0d9488; /* teal-600 */
+}
+
+.nav-item svg { /* Style for icon if you use SVG/react-icons */
+    width: 1.5rem; /* 24px */
+    height: 1.5rem; /* 24px */
+    margin-bottom: 0.25rem;
+}
+
+
+/* Responsive adjustments (example for grid) */
+@media (min-width: 768px) { /* md breakpoint */
+    .cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) { /* lg breakpoint */
+    .cards-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

@@ -1,0 +1,68 @@
+/* src/components/dashboard/NavigationBottom.css */
+
+.navigation-bottom {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fff; /* Changed to white background */
+  border-top: 1px solid #eee; /* Added a subtle border top for definition */
+  padding: 10px 0; /* Adjust padding as needed */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.08); /* Added a subtle shadow */
+  z-index: 1000;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 8px 15px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover {
+  transform: translateY(-2px);
+}
+
+.nav-icon {
+  width: 28px;
+  height: 28px;
+  /* Removed or adjusted filter to make icons black.
+     If your images are already black, you can remove this filter completely.
+     If they are white SVGs, you might use filter: invert(0%) for black.
+     For PNGs/JPEGs, ensure you have black versions of the images. */
+  filter: none; /* Removed filter to show original (black) icon color */
+}
+
+/* Specific styling for the active state (if any) */
+.nav-item.active .nav-icon {
+  /* You can add a subtle change like a slightly different shade or scale if active state is desired */
+}
+
+/* Profile Picture Specific Styles */
+.profile-item {
+  position: relative;
+}
+
+.profile-pic {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #ccc; /* Changed border to a light gray for white background */
+}
+
+.profile-dot {
+  position: absolute;
+  bottom: 0px;
+  right: 12px;
+  width: 6px;
+  height: 6px;
+  background-color: red;
+  border-radius: 50%;
+}
