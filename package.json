@@ -1,6 +1,6 @@
 {
   "name": "post-story-app",
-  "homepage": "https://post.allezbrandworks.com/",
+  "homepage": "https://post-story.vercel.app/",
   "version": "0.1.0",
   "private": true,
   "engines": {
