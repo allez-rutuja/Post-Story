@@ -96,10 +96,11 @@ export default function Login() {
   };
   
   // New function for Google login
- const handleGoogleLogin = async () => {
+// New function for Google login
+  const handleGoogleLogin = async () => {
     try {
       const successUrl = 'https://post-story.vercel.app/home'; 
-      const failureUrl = 'https://post-story.vercel.app/login';
+      const failureUrl = 'https://post-story.vercel.app/login'; 
       
       await account.createOAuth2Session('google', successUrl, failureUrl);
     } catch (error) {
