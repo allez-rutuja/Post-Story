@@ -84,10 +84,10 @@ export default function Login() {
   };
 
   // New function for Facebook login
-  const handleFacebookLogin = async () => {
+    const handleFacebookLogin = async () => {
     try {
-      const successUrl = 'http://localhost:3000/home'; // Your app's success redirect URL
-      const failureUrl = 'http://localhost:3000/login'; // Your app's failure redirect URL
+      const successUrl = 'https://post-story.vercel.app/home'; 
+      const failureUrl = 'https://post-story.vercel.app/login';
       
       await account.createOAuth2Session('facebook', successUrl, failureUrl);
     } catch (error) {
@@ -96,17 +96,16 @@ export default function Login() {
   };
   
   // New function for Google login
-  const handleGoogleLogin = async () => {
+ const handleGoogleLogin = async () => {
     try {
-      const successUrl = 'http://localhost:3000/home'; // Your app's success redirect URL
-      const failureUrl = 'http://localhost:3000/login'; // Your app's failure redirect URL
+      const successUrl = 'https://post-story.vercel.app/home'; 
+      const failureUrl = 'https://post-story.vercel.app/login';
       
       await account.createOAuth2Session('google', successUrl, failureUrl);
     } catch (error) {
       console.error("Google login failed:", error);
     }
   };
-
 
   return (
     <div className="login-container">
